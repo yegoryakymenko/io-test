@@ -3,6 +3,7 @@
 		.container {
 			&-block:first-of-type {
 				.help {
+					margin-top: 45%;
 					.top {
 						p {
 							font-size: 3.2vw;
@@ -86,6 +87,9 @@
 			&-block:first-of-type {
 				width: 100%;
 				height: 399px;
+				.half-circle {
+					display: none;
+				}
 				.help {
 					margin-top: 10%;
 					.top {
@@ -173,6 +177,9 @@
 			&-block:first-of-type {
 				width: 100%;
 				height: 399px;
+				.half-circle {
+					display: none;
+				}
 				.help {
 					margin-top: 10%;
 					.top {
@@ -260,6 +267,9 @@
 			&-block:first-of-type {
 				width: 100%;
 				height: 399px;
+				.half-circle {
+					display: none;
+				}
 				.help {
 					margin-top: 10%;
 					.top {
