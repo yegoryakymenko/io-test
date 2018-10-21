@@ -29,7 +29,7 @@
 				.welcome {
 					padding: 30px;
 					i.fas {
-					    top: -50px;
+					    top: 10px;
 					    left: 27px;
 					}
 					.list {
@@ -42,6 +42,31 @@
 					}
 					p:nth-child(2),p:last-of-type,input {
 					font-size: 1.5vw;
+					}
+					.new-pass {
+						.invalid {
+						top: 34%;
+						right: 7%;
+						font-size: 1.5vw;
+						.triangle {
+						    transform: rotate(0deg);
+						    top: 40px;
+						    left: 110px;
+							}
+						}
+					}
+					.invalid {
+					top: 29%;
+					right: 7%;
+					font-size: 1.3vw;
+					.triangle {
+					    transform: rotate(0deg);
+					    top: 40px;
+					    left: 110px;
+						}
+					}
+					.password {
+					top: 50%;
 					}
 					button {
 						a {
@@ -106,6 +131,31 @@
 					p:nth-child(2),p:last-of-type,input {
 					font-size: 2.5vw;
 					}
+					.new-pass {
+						.invalid {
+						top: 34%;
+						right: 7%;
+						font-size: 1.7vw;
+						.triangle {
+						    transform: rotate(0deg);
+						    top: 40px;
+						    left: 110px;
+							}
+						}
+					}
+					.invalid {
+					top: 29%;
+					right: 7%;
+					font-size: 1.7vw;
+					.triangle {
+					    transform: rotate(0deg);
+					    top: 40px;
+					    left: 110px;
+						}
+					}
+					.password {
+					top: 50%;
+					}
 					button {
 						a {
 							font-size: 2.5vw;
@@ -168,6 +218,31 @@
 					p:nth-child(2),p:last-of-type,input {
 					font-size: 3.5vw;
 					}
+					.new-pass {
+						.invalid {
+						top: 35%;
+						right: 7%;
+						font-size: 1.7vw;
+						.triangle {
+						    transform: rotate(0deg);
+						    top: 40px;
+						    left: 75px;
+							}
+						}
+					}
+					.invalid {
+					top: 29%;
+					right: 7%;
+					font-size: 2.3vw;
+					.triangle {
+					    transform: rotate(0deg);
+					    top: 40px;
+					    left: 105px;
+						}
+					}
+					.password {
+					top: 50%;
+					}
 					button {
 						a {
 							font-size: 3.5vw;
@@ -229,6 +304,31 @@
 					}
 					p:nth-child(2),p:last-of-type,input {
 					font-size: 4vw;
+					}
+					.new-pass {
+						.invalid {
+						top: 35%;
+						right: 7%;
+						font-size: 2.3vw;
+						.triangle {
+						    transform: rotate(0deg);
+						    top: 40px;
+						    left: 85px;
+							}
+						}
+					}
+					.invalid {
+					top: 29%;
+					right: 7%;
+					font-size: 3.5vw;
+					.triangle {
+					    transform: rotate(0deg);
+					    top: 40px;
+					    left: 95px;
+						}
+					}
+					.password {
+					top: 50%;
 					}
 					button {
 						a {

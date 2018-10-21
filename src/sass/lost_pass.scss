@@ -111,7 +111,7 @@ body {
 				i {
 					position: absolute;
 					top: -50px;
-					left: 0;
+					left: 20px;
 					color: #616983;
 					font-size: 20px;
 				}
@@ -146,14 +146,73 @@ body {
 					line-height: 48px;
 					outline: none;
 				}
+				input:focus {
+					border-bottom: 1px solid #00bdff;
+				}
 				input::placeholder { 
 				    color: #616983; 
+				}
+				.error-line {
+					border-bottom: 1px solid #d80b43;
+				}
+				.verified-line {
+					border-bottom: 1px solid #00be98;
+				}
+				.invalid {
+					display: none;
+					max-width: 140px;
+					min-height: 40px;
+					padding: 6px;
+					position: absolute;
+					top: 45%;
+					right: -29%;
+					background: #fff;
+					border-radius: 6px;
+					font-family: "Helvetica Neue";
+					font-size: .8vw;
+					color: #5d6985;
+					.triangle {
+						display: block;
+						position: absolute;
+						border-left: solid 10px transparent;
+					    border-right: solid 10px transparent;
+					    transform: rotate(90deg);
+					    border-top: solid 15px #fff;
+					    height: 0;
+					    width: 0;
+					    top: 10px;
+					    left: -15px;
+					  
+					}
+				}
+				.active {
+					display: block;
+				}
+				@keyframes shake {
+				  10%, 90% {
+				    transform: translate3d(-1px, 0, 0);
+				  }
+
+				  20%, 80% {
+				    transform: translate3d(2px, 0, 0);
+				  }
+
+				  30%, 50%, 70% {
+				    transform: translate3d(-4px, 0, 0);
+				  }
+
+				  40%, 60% {
+				    transform: translate3d(4px, 0, 0);
+				  }
+				}
+				.shake {
+					animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
 				}
 				button {
 					width: 100%;
 					margin-top: 40px;
 					border: none;
-					border-radius: 5px;
+					border-radius: 6px;
 					cursor: pointer;
 					padding: 10px 0;
 					background: linear-gradient(-256deg, #127ef9 0%, #54c3fe 100%);

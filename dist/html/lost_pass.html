@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 	<link rel="stylesheet" href="../css/normalize.css">
 	<link rel="stylesheet" href="../css/lost_pass.css">
-	<script src="../scripts/script.js"></script>
+	<script src="../scripts/lost_pass.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -40,8 +40,14 @@
 					<a href="main_page.html" ><i class="fas fa-long-arrow-alt-left"></i></a>
 				
 				<p>Welcome back</p>
-				<input type="text" placeholder="Enter your email">
+				<form action="" class="new-pass">
+				<input type="text" placeholder="Enter your email" id="email">
+				<div class="invalid email">
+					Oops! You entered an invalid email
+					<div class="triangle"></div>
+				</div>
 				<button><a href="#">Send Me Instructions</a></i></button>
+				</form>
 			</div>
 
 		</div>

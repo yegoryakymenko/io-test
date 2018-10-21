@@ -38,9 +38,19 @@
 			<div class="welcome">
 				<p>Welcome back</p>
 				<p>Sign in to continue to IO Technologies.</p>
-				<input type="text" placeholder="Your email">
-				<input type="password" placeholder="Password">
+				<form action="">
+				<input type="text" placeholder="Your email" id="email">
+				<div class="invalid email">
+					Oops! You entered an invalid email
+					<div class="triangle"></div>
+				</div>
+				<input type="password" placeholder="Password" id="password">
+				<div class="invalid password">
+					Oops! You entered an invalid password
+					<div class="triangle"></div>
+				</div>
 				<button><a href="registered.html">Log in</a><i class="fas fa-arrow-right"></i></button>
+				</form>
 				<p>Forgot your password?<a href="lost_pass.html"> Reset</a></p>
 			</div>
 
