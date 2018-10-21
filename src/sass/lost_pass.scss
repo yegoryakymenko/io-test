@@ -9,13 +9,14 @@ body {
 		display:flex;
 		width: 100%;
 		height: 100vh;
+		overflow: hidden;
 		&-block:first-of-type {		
 			width: 60%;
 			background: linear-gradient(-23deg, #5449b6 0%, #6ba8dc 100%);
 			position: relative;
 			height: auto;
 			.half-circle {
-				height: 100%;
+				height: 103%;
 			    width: 70px;
 			    position: absolute;
 			    right: 0;
@@ -34,7 +35,7 @@ body {
 				}
 			.help {
 				max-width: 970px;
-				max-height: 400px;
+				min-height: 400px;
 				margin: 0 auto;
 				margin-top: 25%;
 				text-align: center;
@@ -126,7 +127,7 @@ body {
 				max-width: 450px;
 				min-height: 810px;
 				margin: 0 auto;
-				margin-top: 20%;
+				margin-top: 30%;
 				text-align: center;
 				padding: 20px;
 				position: relative;
@@ -264,14 +265,6 @@ body {
 						font-size: 1.2vw;
 						font-family: "Helvetica Neue";
 					}
-					i {
-						color: #fff;
-						margin-left: 10px;
-						transition: .4s ease-out;
-					}
-				}
-				button:hover i {
-					transform: translateX(10px);
 				}
 			}
 		}
@@ -322,10 +315,6 @@ body {
 					    top: 25px;
 					    left: 30px;
 					}
-					.list {
-						p,p:nth-child(2),p:last-child {
-							font-size: 3.5vw;
-						}
 					}
 					p {
 						font-size: 4.5vw;
@@ -367,7 +356,6 @@ body {
 			}
 		}
 	}
-}
 @media screen and  (min-width: 320px) and (max-width: 479px){
 	body {
 		.container {
@@ -499,16 +487,11 @@ body {
 					    top: 15px;
 					    left: 30px;
 					}
-					.list {
-						p,p:nth-child(2),p:last-child {
-							font-size: 2vw;
-						}
-					}
 					p {
-						font-size: 4.5vw;
+						font-size: 4vw;
 					}
-					p:nth-child(2),p:last-of-type,input {
-					font-size: 2.5vw;
+					input {
+						font-size: 2vw;
 					}
 					.new-pass {
 						.invalid {
@@ -554,7 +537,7 @@ body {
 					
 				}
 				.help {
-					max-height: 800px;
+					min-height: 800px;
 					margin-top: 70%;
 					.top {
 						p {
@@ -581,23 +564,15 @@ body {
 			&-block:last-of-type {
 				height: 100%;
 				.welcome {
-					max-height: 1024px;
+					min-height: 960px;
 					padding: 30px;
-					margin-top: 70%;
+					margin-top: 90%;
 					i.fas {
 					    top: 0;
 					    left: 30px;
 					}
-					.list {
-						p,p:nth-child(2),p:last-child {
-							font-size: 1.5vw;
-						}
-					}
 					p {
 						font-size: 2.5vw;
-					}
-					p:nth-child(2),p:last-of-type,input {
-					font-size: 1.5vw;
 					}
 					.new-pass {
 						.invalid {
@@ -633,4 +608,20 @@ body {
 			}
 		}
 	}
+}
+@media screen and  (min-width: 1025px) and (max-width: 1800px) {
+	body {
+		.container {
+			&-block:first-of-type {
+				.help {
+					margin-top: 50%;
+				}
+			}
+			&-block:last-of-type {
+				.welcome {
+					margin-top: 50%;
+				}
+			}		
+		}		
+}
 }

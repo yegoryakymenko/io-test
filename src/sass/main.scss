@@ -571,7 +571,7 @@ body {
 					
 				}
 				.help {
-					max-height: 800px;
+					min-height: 800px;
 					margin-top: 70%;
 					.top {
 						p {
@@ -598,7 +598,7 @@ body {
 			&-block:last-of-type {
 				height: 100%;
 				.welcome {
-					max-height: 1024px;
+					min-height: 960px;
 					padding: 30px;
 					margin-top: 70%;
 					i.fas {
@@ -650,4 +650,20 @@ body {
 			}
 		}
 	}
+}
+@media screen and  (min-width: 1025px) and (max-width: 1600px) {
+	body {
+		.container {
+			&-block:first-of-type {
+				.help {
+					margin-top: 50%;
+				}
+			}
+			&-block:last-of-type {
+				.welcome {
+					margin-top: 50%;
+				}
+			}		
+		}		
+}
 }
