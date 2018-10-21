@@ -8,12 +8,12 @@ body {
 	.container{
 		display:flex;
 		width: 100%;
-		height: 100%;
-		&-block:first-of-type {
-			height: 965px;
+		height: 100vh;
+		&-block:first-of-type {		
 			width: 60%;
 			background: linear-gradient(-23deg, #5449b6 0%, #6ba8dc 100%);
 			position: relative;
+			height: auto;
 			.half-circle {
 				height: 100%;
 			    width: 70px;
@@ -105,9 +105,13 @@ body {
 						font-weight: 700;
 						text-transform: uppercase;
 						font-family: 'Helvetica Neue';
+						transition: all .4s;
 					}
 					button:last-child {
 						margin-left: 10px;
+					}
+					button:hover {
+					box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);	
 					}
 				}
 			}
@@ -115,39 +119,36 @@ body {
 		}
 		&-block:last-of-type {
 			width: 40%;
-			height: 965px;
 			background: #10172f;
 			position: relative;
+			height: auto;
 			.welcome {
 				max-width: 450px;
-				max-height: 750px;
+				min-height: 810px;
 				margin: 0 auto;
-				margin-top: 30%;
+				margin-top: 20%;
 				text-align: center;
 				padding: 20px;
 				position: relative;
-				i {
-					position: absolute;
-					top: -50px;
-					left: 20px;
-					color: #616983;
-					font-size: 20px;
-				}
+				.fas {
+					    position: absolute;
+					    font-size: 2vh;
+					    color: #5d6985;
+					    left: 20px;
+					    top: 0;
+					}
 				p {
 					display: block;
 					text-align: left;
 					color: #ffffff;
 					font-family: "Helvetica Neue";
 					font-size: 2vw;
-					font-weight: 500;
+					font-weight: 900;
 					line-height: 56.48px;
-					letter-spacing: -0.64px;
+					letter-spacing: 0.36px;
 					margin: 0;
 					margin-top: 20px;
-					a {
-						color: #0092e6;
-						text-decoration: none;
-					}
+					text-align: left;
 				}
 				input {
 					display: block;
@@ -164,9 +165,6 @@ body {
 					line-height: 48px;
 					outline: none;
 				}
-				input:focus {
-					border-bottom: 1px solid #00bdff;
-				}
 				input::placeholder { 
 				    color: #616983; 
 				}
@@ -182,7 +180,7 @@ body {
 					min-height: 40px;
 					padding: 6px;
 					position: absolute;
-					top: 45%;
+					top: 20%;
 					right: -29%;
 					background: #fff;
 					border-radius: 6px;
@@ -202,6 +200,9 @@ body {
 					    left: -15px;
 					  
 					}
+				}
+				.password {
+					top: 37%;
 				}
 				.active {
 					display: block;
@@ -263,11 +264,373 @@ body {
 						font-size: 1.2vw;
 						font-family: "Helvetica Neue";
 					}
+					i {
+						color: #fff;
+						margin-left: 10px;
+						transition: .4s ease-out;
+					}
 				}
-
+				button:hover i {
+					transform: translateX(10px);
+				}
 			}
 		}
 
 	}
 }
-@import 'tmp/adaptive'
+@media screen and (max-width: 319px){
+	body {
+		.container {
+			flex-wrap: wrap;
+			&-block:first-of-type {
+				width: 100%;
+				height: 399px;
+				.half-circle {
+					display: none;
+				}
+				.help {
+					margin-top: 10%;
+					.top {
+						p {
+							font-size: 4vw;
+						}
+					}
+					.middle {
+						p {
+							font-size: 3.5vw;
+						}
+					}
+					.bottom {
+						width: 80%;
+						p {
+						font-size: 4vw;
+						}
+						button {
+							font-size: 2.5vw;
+							
+						}	
+					}
+					}
+			}
+			&-block:last-of-type {
+				width: 100%;
+				min-height: 400px;
+				.welcome {
+					margin-top: 0;
+					padding: 30px;
+					i.fas {
+					    top: 25px;
+					    left: 30px;
+					}
+					.list {
+						p,p:nth-child(2),p:last-child {
+							font-size: 3.5vw;
+						}
+					}
+					p {
+						font-size: 4.5vw;
+					}
+					p:nth-child(2),p:last-of-type,input {
+					font-size: 4vw;
+					}
+					.new-pass {
+						.invalid {
+						top: 35%;
+						right: 7%;
+						font-size: 2.3vw;
+						.triangle {
+						    transform: rotate(0deg);
+						    top: 40px;
+						    left: 85px;
+							}
+						}
+					}
+					.invalid {
+					top: 29%;
+					right: 7%;
+					font-size: 3.5vw;
+					.triangle {
+					    transform: rotate(0deg);
+					    top: 40px;
+					    left: 95px;
+						}
+					}
+					.password {
+					top: 50%;
+					}
+					button {
+						a {
+							font-size: 4vw;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and  (min-width: 320px) and (max-width: 479px){
+	body {
+		.container {
+			flex-wrap: wrap;
+			height: 100%;
+			&-block:first-of-type {
+				width: 100%;
+				height: 100%;
+				.half-circle {
+					display: none
+				}
+				.help {
+					min-height: 400px;
+					
+					.top {
+						p {
+							font-size: 4vw;
+						}
+					}
+					.middle {
+						p {
+							font-size: 3.5vw;
+						}
+					}
+					.bottom {
+						width: 80%;
+						p {
+						font-size: 2.5vw;
+						}
+						button {
+							font-size: 1.6vw;		
+						}	
+					}
+					}
+			}
+			&-block:last-of-type {
+				width: 100%;
+				height: 566px;
+				.welcome {
+					min-height: 565px;
+					margin-top: 0;
+					padding: 30px;
+					i.fas {
+					    top: 5%;
+					    left: 30px;
+					}	
+					p {
+						font-size: 4.5vw;
+					}
+					p:nth-child(2),p:last-of-type,input {
+					font-size: 2.5vw;
+					}
+					.new-pass {
+						.invalid {
+						top: 26%;
+						right: 7%;
+						font-size: 2.7vw;
+						.triangle {
+						    transform: rotate(0deg);
+						    top: 40px;
+						    left: 110px;
+							}
+						}
+					}
+					.invalid {
+					top: 29%;
+					right: 7%;
+					font-size: 1.7vw;
+					.triangle {
+					    transform: rotate(0deg);
+					    top: 40px;
+					    left: 110px;
+						}
+					}
+					.password {
+					top: 50%;
+					}
+					button {
+						a {
+							font-size: 2.5vw;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (min-width: 480px) and (max-width: 768px){
+	body {
+		.container {
+			flex-wrap: wrap;
+			height: 100%;
+			&-block:first-of-type {
+				width: 100%;
+				min-height: 450px;
+				.half-circle {
+					display: none
+				}
+				.help {
+					margin-top: 10%;
+					.top {
+						p {
+							font-size: 4vw;
+						}
+					}
+					.middle {
+						p {
+							font-size: 3.5vw;
+						}
+					}
+					.bottom {
+						width: 80%;
+						p {
+						font-size: 2.5vw;
+						}
+						button {
+							font-size: 1.6vw;		
+						}	
+					}
+					}
+			}
+			&-block:last-of-type {
+				width: 100%;
+				min-height: 400px;
+				.welcome {
+					margin-top: 0;
+					padding: 30px;
+					i.fas {
+					    top: 15px;
+					    left: 30px;
+					}
+					.list {
+						p,p:nth-child(2),p:last-child {
+							font-size: 2vw;
+						}
+					}
+					p {
+						font-size: 4.5vw;
+					}
+					p:nth-child(2),p:last-of-type,input {
+					font-size: 2.5vw;
+					}
+					.new-pass {
+						.invalid {
+						top: 16%;
+						right: 7%;
+						font-size: 1.7vw;
+						.triangle {
+						    transform: rotate(0deg);
+						    top: 40px;
+						    left: 110px;
+							}
+						}
+					}
+					.invalid {
+					top: 29%;
+					right: 7%;
+					font-size: 1.7vw;
+					.triangle {
+					    transform: rotate(0deg);
+					    top: 40px;
+					    left: 110px;
+						}
+					}
+					.password {
+					top: 50%;
+					}
+					button {
+						a {
+							font-size: 2.5vw;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and  (min-width: 769px) and (max-width: 1024px){
+	body {
+		.container {	
+			&-block:first-of-type {
+				height: 100%;
+				.half-circle {
+					
+				}
+				.help {
+					max-height: 800px;
+					margin-top: 70%;
+					.top {
+						p {
+							font-size: 3.2vw;
+						}
+					}
+					.middle {
+						p {
+							font-size: 2.2vw;	
+						}
+						
+					}
+					.bottom {
+						width: 80%;
+						p {
+						font-size: 1.7vw;
+						}
+						button {
+							font-size: 1.3vw;
+						}	
+					}
+					}
+			}
+			&-block:last-of-type {
+				height: 100%;
+				.welcome {
+					max-height: 1024px;
+					padding: 30px;
+					margin-top: 70%;
+					i.fas {
+					    top: 0;
+					    left: 30px;
+					}
+					.list {
+						p,p:nth-child(2),p:last-child {
+							font-size: 1.5vw;
+						}
+					}
+					p {
+						font-size: 2.5vw;
+					}
+					p:nth-child(2),p:last-of-type,input {
+					font-size: 1.5vw;
+					}
+					.new-pass {
+						.invalid {
+						top: 15%;
+						right: 16%;
+						font-size: 1.5vw;
+						.triangle {
+						    transform: rotate(0deg);
+						    top: 40px;
+						    left: 110px;
+							}
+						}
+					}
+					.invalid {
+					top: 18%;
+					right: 7%;
+					font-size: 1.3vw;
+					.triangle {
+					    transform: rotate(0deg);
+					    top: 40px;
+					    left: 110px;
+						}
+					}
+					.password {
+					top: 34%;
+					}
+					button {
+						a {
+							font-size: 1.8vw;
+						}
+					}
+				}
+			}
+		}
+	}
+}

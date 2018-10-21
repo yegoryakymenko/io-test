@@ -9,14 +9,15 @@ body {
 	.container{
 		display:flex;
 		width: 100%;
-		height: 100%;
-		&-block:first-of-type {
-			height: 965px;
+		height: 100vh;
+		overflow: hidden;
+		&-block:first-of-type {		
 			width: 60%;
 			background: linear-gradient(-23deg, #5449b6 0%, #6ba8dc 100%);
 			position: relative;
+			height: 100%;
 			.half-circle {
-				height: 100%;
+				height: 103%;
 			    width: 70px;
 			    position: absolute;
 			    right: 0;
@@ -35,7 +36,7 @@ body {
 				}
 			.help {
 				max-width: 970px;
-				max-height: 400px;
+				min-height: 400px;
 				margin: 0 auto;
 				margin-top: 25%;
 				text-align: center;
@@ -106,9 +107,13 @@ body {
 						font-weight: 700;
 						text-transform: uppercase;
 						font-family: 'Helvetica Neue';
+						transition: all .4s;
 					}
 					button:last-child {
 						margin-left: 10px;
+					}
+					button:hover {
+					box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);	
 					}
 				}
 			}
@@ -116,13 +121,12 @@ body {
 		}
 		&-block:last-of-type {
 			width: 40%;
-			height: 965px;
 			background: #10172f;
 			position: relative;
-	
+			height: 100%;
 			.welcome {
 				max-width: 450px;
-				max-height: 750px;
+				min-height: 810px;
 				margin: 0 auto;
 				margin-top: 20%;
 				text-align: center;
@@ -142,6 +146,10 @@ body {
 					a {
 						color: #0092e6;
 						text-decoration: none;
+						transition: all .4s;
+					}
+					a:hover {
+						color:#fff;
 					}
 				}
 				p:nth-child(2),p:last-of-type {
@@ -187,7 +195,7 @@ body {
 					min-height: 40px;
 					padding: 6px;
 					position: absolute;
-					top: 37%;
+					top: 24%;
 					right: -29%;
 					background: #fff;
 					border-radius: 6px;
@@ -209,7 +217,7 @@ body {
 					}
 				}
 				.password {
-					top: 56%;
+					top: 37%;
 				}
 				.active {
 					display: block;
@@ -282,7 +290,364 @@ body {
 				}
 			}
 		}
-
 	}
 }
-@import 'tmp/adaptive.scss'
+@media screen and (max-width: 319px){
+	body {
+		.container {
+			flex-wrap: wrap;
+			&-block:first-of-type {
+				width: 100%;
+				height: 399px;
+				.half-circle {
+					display: none;
+				}
+				.help {
+					margin-top: 10%;
+					.top {
+						p {
+							font-size: 4vw;
+						}
+					}
+					.middle {
+						p {
+							font-size: 3.5vw;
+						}
+					}
+					.bottom {
+						width: 80%;
+						p {
+						font-size: 4vw;
+						}
+						button {
+							font-size: 2.5vw;
+							
+						}	
+					}
+					}
+			}
+			&-block:last-of-type {
+				width: 100%;
+				min-height: 400px;
+				.welcome {
+					margin-top: 0;
+					padding: 30px;
+					i.fas {
+					    top: 25px;
+					    left: 30px;
+					}
+					.list {
+						p,p:nth-child(2),p:last-child {
+							font-size: 3.5vw;
+						}
+					}
+					p {
+						font-size: 4.5vw;
+					}
+					p:nth-child(2),p:last-of-type,input {
+					font-size: 4vw;
+					}
+					.new-pass {
+						.invalid {
+						top: 35%;
+						right: 7%;
+						font-size: 2.3vw;
+						.triangle {
+						    transform: rotate(0deg);
+						    top: 40px;
+						    left: 85px;
+							}
+						}
+					}
+					.invalid {
+					top: 29%;
+					right: 7%;
+					font-size: 3.5vw;
+					.triangle {
+					    transform: rotate(0deg);
+					    top: 40px;
+					    left: 95px;
+						}
+					}
+					.password {
+					top: 50%;
+					}
+					button {
+						a {
+							font-size: 4vw;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and  (min-width: 320px) and (max-width: 479px){
+	body {
+		.container {
+			flex-wrap: wrap;
+			height: 100%;
+			&-block:first-of-type {
+				width: 100%;
+				height: 100%;
+				.half-circle {
+					display: none
+				}
+				.help {
+					
+					.top {
+						p {
+							font-size: 4vw;
+						}
+					}
+					.middle {
+						p {
+							font-size: 3.5vw;
+						}
+					}
+					.bottom {
+						width: 80%;
+						p {
+						font-size: 2.5vw;
+						}
+						button {
+							font-size: 1.6vw;		
+						}	
+					}
+					}
+			}
+			&-block:last-of-type {
+				width: 100%;
+				height: 566px;
+				.welcome {
+					margin-top: 0;
+					padding: 30px;
+					i.fas {
+					    top: 15px;
+					    left: 30px;
+					}
+					.list {
+						p,p:nth-child(2),p:last-child {
+							font-size: 2vw;
+						}
+					}
+					p {
+						font-size: 4.5vw;
+					}
+					p:nth-child(2),p:last-of-type,input {
+					font-size: 2.5vw;
+					}
+					.new-pass {
+						.invalid {
+						top: 34%;
+						right: 7%;
+						font-size: 1.7vw;
+						.triangle {
+						    transform: rotate(0deg);
+						    top: 40px;
+						    left: 110px;
+							}
+						}
+					}
+					.invalid {
+					top: 21%;
+					right: 7%;
+					font-size: 2.9vw;
+					.triangle {
+					    transform: rotate(0deg);
+					    top: 38px;
+					    left: 105px;
+						}
+					}
+					.password {
+					top: 34%;
+					}
+					button {
+						a {
+							font-size: 2.5vw;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (min-width: 480px) and (max-width: 768px){
+	body {
+		.container {
+			flex-wrap: wrap;
+			height: 100%;
+			&-block:first-of-type {
+				width: 100%;
+				height: 100%;
+				.half-circle {
+					display: none
+				}
+				.help {
+					margin-top: 10%;
+					.top {
+						p {
+							font-size: 4vw;
+						}
+					}
+					.middle {
+						p {
+							font-size: 3.5vw;
+						}
+					}
+					.bottom {
+						width: 80%;
+						p {
+						font-size: 2.5vw;
+						}
+						button {
+							font-size: 1.6vw;		
+						}	
+					}
+					}
+			}
+			&-block:last-of-type {
+				width: 100%;
+				height: 566px;
+				.welcome {
+					margin-top: 0;
+					padding: 30px;
+					i.fas {
+					    top: 15px;
+					    left: 30px;
+					}
+					.list {
+						p,p:nth-child(2),p:last-child {
+							font-size: 2vw;
+						}
+					}
+					p {
+						font-size: 4.5vw;
+					}
+					p:nth-child(2),p:last-of-type,input {
+					font-size: 2.5vw;
+					}
+					.new-pass {
+						.invalid {
+						top: %;
+						right: 7%;
+						font-size: 1.7vw;
+						.triangle {
+						    transform: rotate(0deg);
+						    top: 40px;
+						    left: 110px;
+							}
+						}
+					}
+					.invalid {
+					top: 20%;
+					right: 7%;
+					font-size: 1.7vw;
+					.triangle {
+					    transform: rotate(0deg);
+					    top: 40px;
+					    left: 110px;
+						}
+					}
+					.password {
+					top: 34%;
+					}
+					button {
+						a {
+							font-size: 2.5vw;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and  (min-width: 769px) and (max-width: 1024px){
+	body {
+		.container {	
+			&-block:first-of-type {
+				height: 100%;
+				.half-circle {
+					
+				}
+				.help {
+					max-height: 800px;
+					margin-top: 70%;
+					.top {
+						p {
+							font-size: 3.2vw;
+						}
+					}
+					.middle {
+						p {
+							font-size: 2.2vw;	
+						}
+						
+					}
+					.bottom {
+						width: 80%;
+						p {
+						font-size: 1.7vw;
+						}
+						button {
+							font-size: 1.3vw;
+						}	
+					}
+					}
+			}
+			&-block:last-of-type {
+				height: 100%;
+				.welcome {
+					max-height: 1024px;
+					padding: 30px;
+					margin-top: 70%;
+					i.fas {
+					    top: 10px;
+					    left: 27px;
+					}
+					.list {
+						p,p:nth-child(2),p:last-child {
+							font-size: 1.5vw;
+						}
+					}
+					p {
+						font-size: 2.5vw;
+					}
+					p:nth-child(2),p:last-of-type,input {
+					font-size: 1.5vw;
+					}
+					.new-pass {
+						.invalid {
+						top: 34%;
+						right: 7%;
+						font-size: 1.5vw;
+						.triangle {
+						    transform: rotate(0deg);
+						    top: 40px;
+						    left: 110px;
+							}
+						}
+					}
+					.invalid {
+					top: 18%;
+					right: 7%;
+					font-size: 1.3vw;
+					.triangle {
+					    transform: rotate(0deg);
+					    top: 40px;
+					    left: 110px;
+						}
+					}
+					.password {
+					top: 34%;
+					}
+					button {
+						a {
+							font-size: 1.8vw;
+						}
+					}
+				}
+			}
+		}
+	}
+}
